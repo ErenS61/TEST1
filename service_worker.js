@@ -1,37 +1,55 @@
-// Cached core static resources
-self.addEventListener("install", e => {
-  e.waitUntil(
-    caches.open("static").then(cache => {
-      return cache.addAll(["./", './images/icon/apple-touch-icon-192x192.png']);
-    }).then(() => {
-      return self.skipWaiting();  // Forcer l'installation et passer à la phase d'activation
-    })
+const CACHE_NAME = 'amicale-geii-cache-v1';  // Nom du cache avec version
+const urlsToCache = [
+  '/',
+  '/index.html',
+  '/styles.css',
+  '/images/icon/apple-touch-icon-192x192.png',
+  '/images/icon/apple-touch-icon-512x512.png',
+  '/manifest.json'
+];
+
+// Installation du Service Worker et mise en cache des ressources
+self.addEventListener('install', (event) => {
+  event.waitUntil(
+    caches.open(CACHE_NAME)
+      .then((cache) => {
+        console.log('Mise en cache des fichiers');
+        return cache.addAll(urlsToCache);
+      })
   );
+  // Force l'activation du nouveau service worker immédiatement
+  self.skipWaiting();
 });
 
-// Activer immédiatement le nouveau service worker
-self.addEventListener("activate", e => {
-  e.waitUntil(
-    caches.keys().then(cacheNames => {
+// Activation du Service Worker et nettoyage des anciens caches
+self.addEventListener('activate', (event) => {
+  event.waitUntil(
+    caches.keys().then((cacheNames) => {
       return Promise.all(
-        cacheNames.map(cache => {
-          // Supprimer l'ancien cache si nécessaire
-          if (cache !== "static") {
+        cacheNames.map((cache) => {
+          if (cache !== CACHE_NAME) {
+            console.log('Suppression de l\'ancien cache :', cache);
             return caches.delete(cache);
           }
         })
       );
-    }).then(() => {
-      return self.clients.claim();  // Prendre le contrôle immédiat des clients
     })
   );
+  // Prendre le contrôle de la page immédiatement
+  return self.clients.claim();
 });
 
-// Fetch resources
-self.addEventListener("fetch", e => {
-  e.respondWith(
-    caches.match(e.request).then(response => {
-      return response || fetch(e.request);
-    })
+// Interception des requêtes réseau pour servir les fichiers en cache
+self.addEventListener('fetch', (event) => {
+  event.respondWith(
+    caches.match(event.request)
+      .then((response) => {
+        // Si la ressource est trouvée dans le cache, la retourner
+        if (response) {
+          return response;
+        }
+        // Sinon, la télécharger du réseau
+        return fetch(event.request);
+      })
   );
 });
