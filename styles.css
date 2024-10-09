@@ -39,8 +39,13 @@ h1 {
     height: auto;
 }
 
-.product-description {
+.product-description-rupture {
     color: #ff0000;
+    font-weight: bold;
+}
+
+.product-description-stock {
+    color: #00ae13;
     font-weight: bold;
 }
 
