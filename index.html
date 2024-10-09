@@ -509,13 +509,46 @@
             <i class="fa-solid fa-caret-up"></i>
         </button>
     </div>
+    
+    <div id="notification" class="notification"> 
+        <strong>La page a été rafraîchie avec succès !</strong>
+    </div>
 
+    
     <script>
+        // Fonction pour rafraîchir la page manuellement et stocker une information dans sessionStorage
         function refreshPage() {
-            location.reload(); // Rafraîchit la page
-            alert("La page a été rafraîchie avec succès !");
+            sessionStorage.setItem("refresh", "true");  // Enregistre qu'un rafraîchissement manuel a eu lieu
+            location.reload();  // Rafraîchit la page
         }
+
+        // Vérifie si la page a été rechargée
+        window.onload = function() {
+            // Si "refresh" est dans sessionStorage, affiche le pop-up
+            if (sessionStorage.getItem("refresh") === "true") {
+                showNotification();  // Appelle la fonction pour afficher la notification
+                sessionStorage.removeItem("refresh");  // Supprime la variable
+            } else if (performance.navigation.type === 1) {  
+                // Détecte un rechargement de page (1 correspond à un reload)
+                showNotification();  // Affiche aussi la notification si le rechargement est dû au navigateur
+            }
+        }
+
+        // Fonction pour afficher et masquer le pop-up avec un effet de fondu
+        function showNotification() {
+            const notification = document.getElementById("notification");
+            notification.style.display = "block";  // Affiche le pop-up
+            setTimeout(() => {
+                notification.style.opacity = "1";  // Apparition avec transition
+            }, 100);  // Légère pause pour appliquer la transition
+
+        // Cache la notification après 3 secondes
+        setTimeout(function() {
+            notification.style.opacity = "0";  // Commence la disparition en fondu
+        }, 5000);
+    }
     </script>
+
     
     <script>
         // Fonction pour remonter en haut de la page
