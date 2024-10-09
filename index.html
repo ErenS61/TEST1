@@ -500,7 +500,7 @@
     <!-- Conteneur pour les boutons flottants -->
     <div class="floating-buttons">
         <!-- Bouton pour rafraîchir la page -->
-        <button class="refresh-button" onclick="window.location.reload();">
+        <button class="refresh-button" onclick="refreshPage()">
             <i class="fa-solid fa-rotate-right"></i>
         </button>
 
@@ -510,6 +510,13 @@
         </button>
     </div>
 
+    <script>
+        function refreshPage() {
+            location.reload(); // Rafraîchit la page
+            alert("La page a été rafraîchie avec succès !");
+        }
+    </script>
+    
     <script>
         // Fonction pour remonter en haut de la page
         function scrollToTop() {
