@@ -131,7 +131,7 @@
                         <td class="non-member-price">1.40 €</td>
                     </tr>
                     <tr data-product-id="1">
-                        <td><img src="images/Crunch.png" alt="Vente Flash 2" class="product-image"></td>
+                        <td><img src="images/Crunch.jpg" alt="Vente Flash 2" class="product-image"></td>
                         <td>Crunch<br>
                             <p class="product-description-rupture"></p>
                             <p class="product-description-stock"></p>
@@ -140,7 +140,7 @@
                         <td class="non-member-price">0.80 €</td>
                     </tr>
                     <tr data-product-id="2">
-                        <td><img src="images/Haribo.jpg" alt="Vente Flash 3" class="product-image"></td>
+                        <td><img src="images/Haribo.png" alt="Vente Flash 3" class="product-image"></td>
                         <td>Haribo Dragibus<br>
                             <p class="product-description-rupture"></p>
                             <p class="product-description-stock"></p>
@@ -466,13 +466,19 @@
             
             
             
-        <!--------------------------------------------------------------------------------------->
-        <!--------------------------------------------------------------------------------------->
-        <!--------------------------------------------------------------------------------------->
+        
             
             
             
         </div>
+        
+        
+        
+        <!--------------------------------------------------------------------------------------->
+        <!--------------------------------------------------------------------------------------->
+        <!--------------------------------------------------------------------------------------->
+        
+        
         
         <section class="copyright">
             <br>
@@ -494,161 +500,138 @@
 
 
 
-    </script>
+
     
     
     <!-- Conteneur pour les boutons flottants -->
-    <div class="floating-buttons">
-        <!-- Bouton pour rafraîchir la page -->
-        <button class="refresh-button" onclick="refreshPage()">
-            <i class="fa-solid fa-rotate-right"></i>
-        </button>
+<div class="floating-buttons">
+    <!-- Bouton pour rafraîchir la page -->
+    <button class="refresh-button" onclick="refreshPage()">
+        <i class="fa-solid fa-rotate-right"></i>
+    </button>
 
-        <!-- Bouton pour remonter en haut de la page -->
-        <button class="scroll-top-button">
-            <i class="fa-solid fa-caret-up"></i>
-        </button>
-    </div>
+    <!-- Bouton pour remonter en haut de la page -->
+    <button class="scroll-top-button">
+        <i class="fa-solid fa-caret-up"></i>
+    </button>
+</div>
     
-    <div id="notification" class="notification"> 
-        <strong>La page a été rafraîchie avec succès !</strong>
-    </div>
-
-    
-    <script>
-        // Fonction pour rafraîchir la page manuellement et stocker une information dans sessionStorage
-        function refreshPage() {
-            sessionStorage.setItem("refresh", "true");  // Enregistre qu'un rafraîchissement manuel a eu lieu
-            location.reload();  // Rafraîchit la page
-        }
-
-        // Vérifie si la page a été rechargée
-        window.onload = function() {
-            // Si "refresh" est dans sessionStorage, affiche le pop-up
-            if (sessionStorage.getItem("refresh") === "true") {
-                showNotification();  // Appelle la fonction pour afficher la notification
-                sessionStorage.removeItem("refresh");  // Supprime la variable
-            } else if (performance.navigation.type === 1) {  
-                // Détecte un rechargement de page (1 correspond à un reload)
-                showNotification();  // Affiche aussi la notification si le rechargement est dû au navigateur
-            }
-        }
-
-        // Fonction pour afficher et masquer le pop-up avec un effet de fondu
-        function showNotification() {
-            const notification = document.getElementById("notification");
-            notification.style.display = "block";  // Affiche le pop-up
-            setTimeout(() => {
-                notification.style.opacity = "1";  // Apparition avec transition
-            }, 100);  // Légère pause pour appliquer la transition
-
-        // Cache la notification après 3 secondes
-        setTimeout(function() {
-            notification.style.opacity = "0";  // Commence la disparition en fondu
-        }, 5000);
-    }
-    </script>
+<div id="notification" class="notification"> 
+    <strong>La page a été rafraîchie avec succès !</strong>
+</div>
 
     
-    <script>
-        // Fonction pour remonter en haut de la page
-        function scrollToTop() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth' // Défilement fluide vers le haut
-            });
-        }
-
-        // Ajouter l'événement de clic au bouton "scroll-top-button"
-        document.querySelector('.scroll-top-button').onclick = scrollToTop;
-    </script>
     
-    <script>
-    // Object pour gérer la disponibilité des produits
-    const products = {
     
-    /* --------------------------------------- */
-    /* ------------- VENTE FLASH ------------- */
-    /* --------------------------------------- */
-        
-    0 : { name : 'Powerade', format : 'png', available : 1}, // 1 pour disponible, 0 pour épuisé
-    1 : { name : 'Crunch', format : 'png', available : 1},
-    2 : { name : 'Haribo', format : 'jpg', available : 1},
+    <!------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------->
     
-    /* --------------------------------------- */
-    /* ---------------- SNACKS --------------- */
-    /* --------------------------------------- */
     
-    3 : { name : 'Kinder', format : 'jpg', available : 1},
-    4 : { name : 'Kinder White', format : 'jpg', available : 1},
-    5 : { name : 'Kit Kat', format : 'jpg', available : 1},
-    6 : { name : 'Kit Kat White', format : 'jpg', available : 1},
-    7 : { name : 'Lion', format : 'jpg', available : 1},
     
-    /* --------------------------------------- */
-    /* ----------------- SALÉ ---------------- */
-    /* --------------------------------------- */
     
-    8 : { name : 'Chips Paysanne', format : 'jpg', available : 1},
-    9 : { name : 'Chips Barbecue', format : 'jpg', available : 1},
     
-    /* --------------------------------------- */
-    /* --------------- BOISSONS -------------- */
-    /* --------------------------------------- */
-    
-    10 : { name : 'Coca Cola', format : 'jpg', available : 1},
-    11 : { name : 'Coca Cola Cherry', format : 'png', available : 1},
-    12 : { name : 'Coca Cola Zero', format : 'jpg', available : 1},
-    13 : { name : 'Ice Tea', format : 'jpg', available : 1},
-    14 : { name : 'Orangina', format : 'jpg', available : 1},
-    15 : { name : '7 Up', format : 'png', available : 1},
-    16 : { name : 'Oasis Tropical', format : 'jpg', available : 1},
-    17 : { name : 'Red Bull', format : 'jpg', available : 1},
-    18 : { name : 'Eau Plate', format : 'jpg', available : 1},
-    19 : { name : 'Eau Gazeuse', format : 'png', available : 1},
-    20 : { name : 'Capri Sun', format : 'jpg', available : 1},
-    
-    /* --------------------------------------- */
-    /* ----------- BOISSONS CHAUDES ---------- */
-    /* --------------------------------------- */
-    
-    21 : { name : 'Café', format : 'jpg', available : 1}, // CAFÉ EXPRESSO  !
-    22 : { name : 'Café', format : 'jpg', available : 1}, // CAFÉ SENSEO    !
-    23 : { name : 'Café', format : 'jpg', available : 1}, // CAFÉ NOISETTE  !
-    24 : { name : 'Chocolat Chaud', format : 'jpg', available : 1},
-    25 : { name : 'Thé', format : 'png', available : 1},
-    
-        
-    };
+<script>
+// Object pour gérer la disponibilité des produits
+const products = {
 
 
-    // Fonction pour mettre à jour l'affichage des produits
-    function updateProducts() {
-    for (let id in products) {
-        const product = products[id];
-        const row = document.querySelector(`tr[data-product-id="${id}"]`);
-        const img = row.querySelector('.product-image');
-        const description_rupture = row.querySelector('.product-description-rupture');
-        const description_stock = row.querySelector('.product-description-stock');
 
-        if (product.available) {
-            // Produit disponible
-            img.src = `images/${product.name}.${product.format}`; // Utilise le format de l'image
-            description_stock.textContent = 'En Stock !'; // Pas de mention 'En rupture !'
-        } else {
-            // Produit épuisé
-            img.src = 'images/Sold Out.png'; // Remplace par l'image 'Sold Out'
-            description_rupture.textContent = 'En rupture !'; // Affiche la mention 'En rupture !'
+    
+
+
+/* --------------------------------------- */
+/* ------------- VENTE FLASH ------------- */
+/* --------------------------------------- */
+    
+0 : { name : 'Powerade', format : 'png', available : 1}, // 1 pour disponible, 0 pour épuisé
+1 : { name : 'Crunch', format : 'jpg', available : 1},
+2 : { name : 'Haribo', format : 'png', available : 1},
+
+/* --------------------------------------- */
+/* ---------------- SNACKS --------------- */
+/* --------------------------------------- */
+
+3 : { name : 'Kinder', format : 'jpg', available : 1},
+4 : { name : 'Kinder White', format : 'jpg', available : 1},
+5 : { name : 'Kit Kat', format : 'jpg', available : 1},
+6 : { name : 'Kit Kat White', format : 'jpg', available : 1},
+7 : { name : 'Lion', format : 'jpg', available : 1},
+
+/* --------------------------------------- */
+/* ----------------- SALÉ ---------------- */
+/* --------------------------------------- */
+
+8 : { name : 'Chips Paysanne', format : 'jpg', available : 1},
+9 : { name : 'Chips Barbecue', format : 'jpg', available : 1},
+
+/* --------------------------------------- */
+/* --------------- BOISSONS -------------- */
+/* --------------------------------------- */
+
+10 : { name : 'Coca Cola', format : 'jpg', available : 1},
+11 : { name : 'Coca Cola Cherry', format : 'png', available : 1},
+12 : { name : 'Coca Cola Zero', format : 'jpg', available : 1},
+13 : { name : 'Ice Tea', format : 'jpg', available : 1},
+14 : { name : 'Orangina', format : 'jpg', available : 1},
+15 : { name : '7 Up', format : 'png', available : 1},
+16 : { name : 'Oasis Tropical', format : 'jpg', available : 1},
+17 : { name : 'Red Bull', format : 'jpg', available : 1},
+18 : { name : 'Eau Plate', format : 'jpg', available : 1},
+19 : { name : 'Eau Gazeuse', format : 'png', available : 1},
+20 : { name : 'Capri Sun', format : 'jpg', available : 1},
+
+/* --------------------------------------- */
+/* ----------- BOISSONS CHAUDES ---------- */
+/* --------------------------------------- */
+
+21 : { name : 'Café', format : 'jpg', available : 1}, // CAFÉ EXPRESSO  !
+22 : { name : 'Café', format : 'jpg', available : 1}, // CAFÉ SENSEO    !
+23 : { name : 'Café', format : 'jpg', available : 1}, // CAFÉ NOISETTE  !
+24 : { name : 'Chocolat Chaud', format : 'jpg', available : 1},
+25 : { name : 'Thé', format : 'png', available : 1},
+
+
+
+
+
+
+
+
+
+};
+
+
+// Fonction pour mettre à jour l'affichage des produits
+function updateProducts() {
+for (let id in products) {
+    const product = products[id];
+    const row = document.querySelector(`tr[data-product-id="${id}"]`);
+    const img = row.querySelector('.product-image');
+    const description_rupture = row.querySelector('.product-description-rupture');
+    const description_stock = row.querySelector('.product-description-stock');
+
+    if (product.available) {
+        // Produit disponible
+        img.src = `images/${product.name}.${product.format}`; // Utilise le format de l'image
+        description_stock.textContent = 'En Stock !'; // Pas de mention 'En rupture !'
+    } else {
+        // Produit épuisé
+        img.src = 'images/Sold Out.png'; // Remplace par l'image 'Sold Out'
+        description_rupture.textContent = 'En rupture !'; // Affiche la mention 'En rupture !'
         }
     }
 }
 
 
-    // Appelle la fonction pour initialiser l'affichage
+// Appelle la fonction pour initialiser l'affichage
     updateProducts();
-</script>
-
 
     
+</script>
+
+<script src="main.js"></script>
+    
 </body>
+    
 </html>

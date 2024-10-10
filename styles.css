@@ -222,6 +222,10 @@ table img {
     z-index: 9999;
 }
 
+.product-image {
+    border-radius : 5px;
+}
+
 /* -------------------------------------------------- */
 
 /* Responsive design pour les petits écrans */
@@ -283,11 +287,11 @@ table img {
     }
     
     .notification {
-    padding : 8px;
-    font-size : 14px;
-    margin-right : 65px;
-    z-index : 9999;
-}
+        padding : 8px;
+        font-size : 14px;
+        margin-right : 65px;
+        z-index : 9999;
+    }
     
 }
 
