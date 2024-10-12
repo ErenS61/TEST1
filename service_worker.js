@@ -1,4 +1,4 @@
-const CACHE_NAME = 'amicale-geii-cache-v1';  // Nom du cache avec version
+const CACHE_NAME = 'amicale-geii-cache-v2';  // Nom du cache avec version
 const urlsToCache = [
   '/',
   '/index.html',
