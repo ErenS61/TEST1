@@ -1,10 +1,10 @@
-const CACHE_NAME = 'amicale-geii-cache-v1';  // Nom du cache avec version
+const CACHE_NAME = 'amicale-geii-cache-v2';  // Nom du cache avec version
 const urlsToCache = [
   '/',
   '/index.html',
   '/styles.css',
-  '/images/icon/logo192.png',
-  '/images/icon/logo512.png',
+  '/images/icon/logo192?v=2.png',
+  '/images/icon/logo512?v=2.png',
   '/manifest.json'
 ];
 

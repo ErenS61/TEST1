@@ -7,12 +7,12 @@
     "display": "standalone",
     "icons":[
       {
-        "src":"images/icon/logo192.png",
+        "src":"images/icon/logo192?v=2.png",
         "sizes": "192x192",
         "type": "image/png"
       },
       {
-        "src":"images/icon/logo512.png",
+        "src":"images/icon/logo512?v=2.png",
         "sizes": "512x512",
         "type": "image/png"
       }
