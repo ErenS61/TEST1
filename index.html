@@ -20,7 +20,6 @@
     <!-- Favicon et icônes -->
     <link rel="icon" href="images/icon/favicon.ico"/>
     <link rel="shortcut icon" href="images/icon/shortcut icon 16x16.ico" type="image/x-icon"/>
-    <link rel="shortcut icon" href="images/icon/shortcut icon 32x32.ico" type="image/x-icon"/>
 
     <!-- Apple Touch Icons pour iPhone/iPad -->
     <link rel="apple-touch-icon" sizes="57x57" href="images/icon/apple-touch-icon-57x57.png"/>
@@ -480,17 +479,13 @@
         
         
         
-        <section class="copyright">
-            <br>
-          <!--  <h3>Un grand MERCI à <a href="https://github.com/ErenS61" target="_blank">Eren</a> pour la création de la page web ! ❤️</h3> -->
-            <br>
-            <h3>Copyright © 2024 Amicale GEii Mulhouse. Tous droits réservés.</h3>
-            <br>
-        </section>
+        
         
     </main>
     
-    
+    <footer>
+        <p>&copy; 2024 Amicale GEii. Tous droits réservés.</p>
+    </footer>
 
 
     <!------------------------------------------------------------------------->
@@ -504,7 +499,13 @@
     
     
     <!-- Conteneur pour les boutons flottants -->
+<!-- Ajout du bouton Menu -->
 <div class="floating-buttons">
+    <!-- Bouton pour ouvrir le menu -->
+    <button class="menu-button">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+
     <!-- Bouton pour rafraîchir la page -->
     <button class="refresh-button" onclick="refreshPage()">
         <i class="fa-solid fa-rotate-right"></i>
@@ -515,6 +516,19 @@
         <i class="fa-solid fa-caret-up"></i>
     </button>
 </div>
+
+<!-- Page grisée pour le menu -->
+<div id="menu-overlay" class="menu-overlay">
+    <div class="menu-content">
+        <!-- Bouton pour fermer le menu -->
+        <button class="close-menu">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <h2>Menu</h2>
+        <a href="A propos/about.html" class="menu-link">À propos</a>
+    </div>
+</div>
+
     
 <div id="notification" class="notification"> 
     <strong>La page a été rafraîchie avec succès !</strong>
