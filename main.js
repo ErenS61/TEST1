@@ -30,32 +30,27 @@ function showNotification() {
     }, 5000);
 }
 
-
 // Sélection des éléments HTML
-const menuButton = document.querySelector('.menu-button');
-const menuOverlay = document.getElementById('menu-overlay');
-const closeMenuButton = document.querySelector('.close-menu');
+const menuButton = document.querySelector(".menu-button");
+const menuOverlay = document.getElementById("menu-overlay");
+const closeMenuButton = document.querySelector(".close-menu");
 
 // Ouvrir le menu
-menuButton.addEventListener('click', () => {
-    menuOverlay.classList.add('active');
+menuButton.addEventListener("click", () => {
+    menuOverlay.classList.add("active");
 });
 
 // Fermer le menu
-closeMenuButton.addEventListener('click', () => {
-    menuOverlay.classList.remove('active');
+closeMenuButton.addEventListener("click", () => {
+    menuOverlay.classList.remove("active");
 });
 
 // Fermer le menu en cliquant en dehors du contenu
-menuOverlay.addEventListener('click', (e) => {
+menuOverlay.addEventListener("click", (e) => {
     if (e.target === menuOverlay) {
-        menuOverlay.classList.remove('active');
+        menuOverlay.classList.remove("active");
     }
 });
-
-
-
-
 
 /* --------------------------------------------------------- */
 /* --------------------------------------------------------- */
@@ -71,3 +66,11 @@ function scrollToTop() {
 
 // Ajouter l'événement de clic au bouton "scroll-top-button"
 document.querySelector(".scroll-top-button").onclick = scrollToTop;
+
+/* --------------------------------------------------------- */
+/* --------------------------------------------------------- */
+/* --------------------------------------------------------- */
+
+function goBack() {
+    window.history.back(); // Retourne à la page précédente
+}

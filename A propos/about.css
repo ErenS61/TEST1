@@ -138,11 +138,16 @@ footer p {
     display: flex;
     border-radius: 50%;
     z-index: 9999;
-    transition: background-color 0.3s;
+}
+
+.back-button button {
+    background: none;
+    border: none;
+    padding: 0;
 }
 
 .back-button i {
-    background-color: #80808080; /* Gris avec transparence */
+    background-color: #80808080;
     color: #fff;
     border: none;
     border-radius: 50%;
@@ -150,9 +155,9 @@ footer p {
     font-size: 24px;
     cursor: pointer;
     box-shadow: 1px 4px 6px #0000001a;
+    transition: background-color 0.3s;
 }
 
-/* Effet au survol */
-.back-button:hover {
+.back-button:hover i {
     background-color: #808080cc;
 }
