@@ -276,7 +276,7 @@ footer p {
 .close-menu {
     position: absolute;
     top: 15px;
-    right: 15px;
+    right: 20px;
     background-color: transparent;
     border: none;
     font-size: 24px;
