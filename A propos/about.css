@@ -56,23 +56,6 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Styles pour le footer */
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    border-bottom: 1px solid transparent;
-}
-
-footer p {
-    margin: 0;
-    font-size: 0.9em;
-}
-
 /* --------------------------------------------------- */
 /* --------------------------------------------------- */
 /* --------------------------------------------------- */
@@ -186,15 +169,15 @@ footer p {
 /* Contenu du menu */
 .menu-content {
     background-color: #ffffff;
-    height : 150px;
-    width : 300px;
+    height: 200px;
+    width: 300px;
     border-radius: 10px;
     position: relative;
     text-align: center;
 }
 
 .menu-content h2 {
-    margin-top : 20px;
+    margin-top: 20px;
 }
 
 /* Bouton pour fermer le menu */
@@ -205,26 +188,59 @@ footer p {
     background-color: transparent;
     border: none;
     font-size: 24px;
-    color : #ff0000;
+    color: #ff0000;
     cursor: pointer;
 }
 
 /* Lien du menu */
-.menu-link {
+.menu-link-amicalistes {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: #16bf3f;
+    border: 2px solid #16bf3f; /* Ajouter une bordure */
+    border-radius: 8px; /* Arrondir les coins */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Effet de transition */
+}
+
+/* Effet au survol */
+.menu-link-amicalistes:hover {
+    background-color: #16bf3f;
+    color: #fff; /* Changer la couleur du texte en blanc */
+    text-decoration: none;
+}
+
+/* Lien du menu */
+.menu-link-accueil {
     display: inline-block;
     padding: 10px 20px;
     margin-top: 1px;
     text-decoration: none;
     font-size: 18px;
     font-weight: bold;
-    color: #16bf3f;
-    border: 2px solid #16bf3f;  /* Ajouter une bordure */
-    border-radius: 8px;  /* Arrondir les coins */
-    transition: background-color 0.3s ease, color 0.3s ease;  /* Effet de transition */
+    color: #ff00ec;
+    border: 2px solid #ff00ec; /* Ajouter une bordure */
+    border-radius: 8px; /* Arrondir les coins */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Effet de transition */
 }
 
 /* Effet au survol */
-.menu-link:hover {
-    background-color: #16bf3f;
-    color: #fff;  /* Changer la couleur du texte en blanc */
+.menu-link-accueil:hover {
+    background-color: #ff00ec;
+    color: #fff; /* Changer la couleur du texte en blanc */
+    text-decoration: none;
+}
+
+/* -------------------------------------------------- */
+
+@media (max-width: 768px) {
+    .notification {
+        padding : 8px;
+        font-size : 14px;
+        margin-right : 65px;
+        z-index : 9999;
+    }
 }

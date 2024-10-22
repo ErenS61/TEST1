@@ -179,6 +179,32 @@ footer p {
     height : 40px;
 }
 
+.apple-pay-icon {
+    font-size: 40px;
+    margin-left: 10px;
+}
+
+.paiement-sans-contact {
+    width : 52.3px;
+    height : 32px;
+    border-radius: 20%;
+}
+
+.mastercard-icon {
+    font-size: 40px;
+    margin-left: 10px;
+}
+
+.visa-icon {
+    font-size: 40px;
+    margin-left: 10px;
+}
+
+.google-pay-icon {
+    font-size: 40px;
+    margin-left: 10px;
+}
+
 .lien-instagram {
     display: inline-flex;
     align-items: center;
@@ -302,6 +328,7 @@ footer p {
 .menu-link-about:hover {
     background-color: #0d75e4;
     color: #fff;  /* Changer la couleur du texte en blanc */
+    text-decoration: none;
 }
 
 /* Lien du menu */
@@ -322,6 +349,7 @@ footer p {
 .menu-link-amicalistes:hover {
     background-color: #16bf3f;
     color: #fff;  /* Changer la couleur du texte en blanc */
+    text-decoration: none;
 }
 
 
