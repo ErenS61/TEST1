@@ -5,6 +5,8 @@ const urlsToCache = [
   "/styles.css",
   "/A propos/about.html",
   "/A propos/about.css",
+  "/Les Amicalistes/les-amicalistes.html",
+  "Les Amicalistes/les-amicalistes.css",
   "/images/icon/apple-touch-icon-192x192.png",
   "/images/icon/apple-touch-icon-512x512.png",
   "/manifest.json"

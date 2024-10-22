@@ -261,7 +261,7 @@ footer p {
 /* Contenu du menu */
 .menu-content {
     background-color: #ffffff;
-    height : 150px;
+    height : 200px;
     width : 300px;
     border-radius: 10px;
     position: relative;
@@ -285,7 +285,7 @@ footer p {
 }
 
 /* Lien du menu */
-.menu-link {
+.menu-link-about {
     display: inline-block;
     padding: 10px 20px;
     margin-top: 20px;
@@ -299,8 +299,28 @@ footer p {
 }
 
 /* Effet au survol */
-.menu-link:hover {
+.menu-link-about:hover {
     background-color: #0d75e4;
+    color: #fff;  /* Changer la couleur du texte en blanc */
+}
+
+/* Lien du menu */
+.menu-link-amicalistes {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: #16bf3f;
+    border: 2px solid #16bf3f;  /* Ajouter une bordure */
+    border-radius: 8px;  /* Arrondir les coins */
+    transition: background-color 0.3s ease, color 0.3s ease;  /* Effet de transition */
+}
+
+/* Effet au survol */
+.menu-link-amicalistes:hover {
+    background-color: #16bf3f;
     color: #fff;  /* Changer la couleur du texte en blanc */
 }
 

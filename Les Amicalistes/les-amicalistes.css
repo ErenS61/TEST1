@@ -1,59 +1,57 @@
-/* Styles de base pour le corps */
+/* Styles de base */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
     margin: 0;
     padding: 0;
+    background-color: #f4f4f4;
 }
 
-/* Styles pour le header */
 header {
     background-color: #0d75e4;
     color: white;
     text-align: center;
-    padding: 20px 0;
+    padding: 20px;
 }
 
 header h1 {
     margin: 0;
-    font-size: 2.5em;
 }
 
-/* Section de contenu */
-section {
+/* Section des membres */
+.members-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));  /* Grille fluide */
+    gap: 20px;
     padding: 20px;
-    margin: 20px auto;
-    width: 80%;
-    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.member {
     background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Titres des sections */
-section h2 {
-    color: #0d75e4;
-    font-size: 1.8em;
-    margin-bottom: 10px;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
-/* Texte des paragraphes */
-section p {
-    line-height: 1.6;
-    font-size: 1.1em;
-    margin-bottom: 20px;
+.member img {
+    width: 100%;
+    height: auto;
+    border-radius: 20%;
+    max-width: 150px;
+    margin-bottom: 10px;
 }
 
-/* Styles pour les liens */
-a {
-    color: #0d75e4;
-    text-decoration: none;
+.member h3 {
+    margin: 10px 0 5px;
+    font-size: 1.4em;
+    color: #333;
 }
 
-a:hover {
-    text-decoration: underline;
+.member p {
+    font-size: 0.9em;
+    color: #666;
 }
 
 /* Styles pour le footer */
@@ -72,10 +70,6 @@ footer p {
     margin: 0;
     font-size: 0.9em;
 }
-
-/* --------------------------------------------------- */
-/* --------------------------------------------------- */
-/* --------------------------------------------------- */
 
 /* Style général pour les boutons flottants */
 .floating-buttons {
@@ -217,14 +211,14 @@ footer p {
     text-decoration: none;
     font-size: 18px;
     font-weight: bold;
-    color: #16bf3f;
-    border: 2px solid #16bf3f;  /* Ajouter une bordure */
+    color: #0d75e4;
+    border: 2px solid #0d75e4;  /* Ajouter une bordure */
     border-radius: 8px;  /* Arrondir les coins */
     transition: background-color 0.3s ease, color 0.3s ease;  /* Effet de transition */
 }
 
 /* Effet au survol */
 .menu-link:hover {
-    background-color: #16bf3f;
+    background-color: #0d75e4;
     color: #fff;  /* Changer la couleur du texte en blanc */
 }
