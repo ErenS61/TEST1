@@ -42,7 +42,30 @@ h1 {
 .product-description-rupture {
     color: #ff0000;
     font-weight: bold;
+    animation: blink 3s infinite;
 }
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1; /* Le texte est visible */
+    }
+    50% {
+        opacity: 0; /* Le texte disparaît */
+    }
+}
+.out-of-stock-img {
+    animation: blink 3s infinite; /* Même animation que pour le texte */
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1; /* Complètement visible */
+    }
+    50% {
+        opacity: 0; /* Complètement invisible */
+    }
+}
+
 
 .product-description-stock {
     color: #00ae13;

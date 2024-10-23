@@ -609,10 +609,12 @@
                         // Produit disponible
                         img.src = `images/${product.name}.${product.format}`; // Utilise le format de l'image
                         description_stock.textContent = "En Stock !"; // Pas de mention 'En rupture !'
+                        img.classList.remove("out-of-stock-img"); // Supprime la classe de clignotement si disponible
                     } else {
                         // Produit épuisé
                         img.src = "images/Sold Out.png"; // Remplace par l'image 'Sold Out'
                         description_rupture.textContent = "En rupture !"; // Affiche la mention 'En rupture !'
+                        img.classList.add("out-of-stock-img"); // Ajoute la classe pour clignoter
                     }
                 }
             }
