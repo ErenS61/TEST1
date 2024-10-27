@@ -180,6 +180,19 @@ table img {
     color: #ff0000;
 }
 
+.annonce-refresh {
+    animation: blink 3s infinite; /* Même animation que pour le texte */
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1; /* Complètement visible */
+    }
+    50% {
+        opacity: 0; /* Complètement invisible */
+    }
+}
+
 footer {
     background-color: #333;
     color: white;
