@@ -226,6 +226,12 @@ footer p {
     border-radius: 20%;
 }
 
+.CB {
+    width : 48px;
+    height : 36px;
+    margin-left: 10px;
+}
+
 .mastercard-icon {
     font-size: 40px;
     margin-left: 10px;
@@ -239,6 +245,32 @@ footer p {
 .google-pay-icon {
     font-size: 40px;
     margin-left: 10px;
+}
+
+.euro-icon {
+    font-size: 40px;
+    margin-left: 10px;
+}
+
+.bank-transfer-icon {
+    font-size: 40px;
+    margin-left: 10px;
+}
+
+.bank-icon {
+    font-size: 40px;
+}
+
+.IBAN {
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.moyen-de-paiement {
+    color : #ff0000;
+    font-weight: bold;
+    text-decoration: underline;
 }
 
 .lien-instagram {

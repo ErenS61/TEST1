@@ -74,3 +74,17 @@ document.querySelector(".scroll-top-button").onclick = scrollToTop;
 function goBack() {
     window.history.back(); // Retourne à la page précédente
 }
+
+document.getElementById("CopyIBAN").addEventListener("click", function() {
+        // Le texte à copier
+        const texte = this.innerText;
+
+        // Copier le texte dans le presse-papiers
+        navigator.clipboard.writeText(texte)
+            .then(() => {
+                alert("Texte copié dans le presse-papiers !");
+            })
+            .catch(err => {
+                console.error("Erreur lors de la copie : ", err);
+            });
+    });

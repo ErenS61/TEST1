@@ -34,7 +34,7 @@
 
         <!-- Fichier manifest pour la PWA -->
 
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
     </head>
 
     <body>
@@ -87,7 +87,7 @@
                 <br />
                 <p>---------------------------------------------</p>
                 <br />
-                <p><strong>+ 0.10 € pour les paiements par CB</strong></p>
+                <p class="moyen-de-paiement">MOYENS DE PAIEMENT ACCEPTÉS</p>
                 <br />
                 <img
                     src="https://upload.wikimedia.org/wikipedia/en/8/83/Universal_Contactless_Card_Symbol.svg"
@@ -97,6 +97,26 @@
                 <i class="fa-brands fa-google-pay google-pay-icon"></i>
                 <i class="fa-brands fa-cc-mastercard mastercard-icon"></i>
                 <i class="fa-brands fa-cc-visa visa-icon"></i>
+                <img src="images/icon/Carte bleue.png" alt="CB" class="CB" />
+                <i class="fa-solid fa-euro-sign euro-icon"></i>
+                
+                <br />
+                <br />
+                <p><strong>+ 0.10 € pour les paiements par CB</strong></p>
+                <br />
+                <p>---------------------------------------------</p>
+                <br />
+                <i class="fa-solid fa-building-columns bank-icon"></i>
+                <i class="fa-solid fa-money-bill-transfer bank-transfer-icon"></i>
+                <br />
+                <br />
+                <p > <strong>Paiement par virement bancaire IBAN</strong> </p>
+                <br />
+                <p> <strong>(Cliquer pour copier)</strong></p>
+                <p>⬇️</p>
+                <br />
+                <p id="CopyIBAN" class='IBAN'>FR76 1027 8030 2800 0269 4154 574</p>
+                <br />
                 <p>---------------------------------------------</p>
                 <br />
                 <p><strong>Suivez-nous sur Instagram</strong></p>
@@ -110,7 +130,7 @@
                 <p>
                     <strong
                         >Un grand MERCI à <a href="https://github.com/ErenS61" target="_blank">Eren</a> pour la création
-                        de la page web et de l'application ! ❤️</strong
+                        de la page web et de l'application ! ❤️ </strong
                     >
                 </p>
                 <br />
@@ -563,19 +583,19 @@
                 /* --------------------------------------- */
 
                 8: { name: "Chips Paysanne", format: "jpg", available: 1 },
-                9: { name: "Chips Barbecue", format: "jpg", available: 0 },
+                9: { name: "Chips Barbecue", format: "jpg", available: 1 },
 
                 /* --------------------------------------- */
                 /* --------------- BOISSONS -------------- */
                 /* --------------------------------------- */
 
-                10: { name: "Coca Cola", format: "jpg", available: 0 },
+                10: { name: "Coca Cola", format: "jpg", available: 1 },
                 11: { name: "Coca Cola Cherry", format: "png", available: 1 },
                 12: { name: "Coca Cola Zero", format: "jpg", available: 1 },
                 13: { name: "Ice Tea", format: "jpg", available: 1 },
                 14: { name: "Orangina", format: "jpg", available: 1 },
                 15: { name: "7 Up", format: "png", available: 1 },
-                16: { name: "Oasis Tropical", format: "jpg", available: 0 },
+                16: { name: "Oasis Tropical", format: "jpg", available: 1 },
                 17: { name: "Red Bull", format: "jpg", available: 1 },
                 18: { name: "Eau Plate", format: "jpg", available: 1 },
                 19: { name: "Eau Gazeuse", format: "png", available: 1 },
