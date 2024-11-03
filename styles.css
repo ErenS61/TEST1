@@ -262,7 +262,7 @@ footer p {
 }
 
 .IBAN {
-    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-family: "Comic Sans MS";
     font-weight: bold;
     text-decoration: underline;
 }
