@@ -14,7 +14,6 @@ body {
     background-image: url('images/icon/noel-deco.png');
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
     background-attachment: fixed; /* Assure que l'image reste en place au scroll */
 }
 
@@ -849,11 +848,6 @@ footer p {
 /* -------------------------------------------------- */
 
 @media only screen and (min-width: 724px) and (max-width: 744px) and (min-height: 383px) and (max-height: 403px) { /* Taille pour les iPhone 15 Pro en mode PAYSAGE */
-    body {
-        background-size: contain; /* Utilise 'contain' pour éviter le grossissement */
-        background-position: top center; /* Centre l'image en haut */
-        background-attachment: fixed;
-    }
 
     .title-image-left {
         position: absolute;
@@ -890,5 +884,13 @@ footer p {
         right: 15px;
         width: 170px;
         height: auto;
+    }
+}
+
+
+@media screen and (max-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+    body {
+        background-attachment: scroll; /* Enlève le 'fixed' sur iOS */
+        min-height: 100vh; /* Assure que le fond couvre toute la hauteur de la fenêtre */
     }
 }
