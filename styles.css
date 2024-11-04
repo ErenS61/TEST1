@@ -6,10 +6,16 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #0d75e4;
+    /*background-color: #0d75e4;*/
     display: flex;
     flex-direction: column;
     align-items: center;
+    
+    background-image: url('images/icon/noel-deco.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Assure que l'image reste en place au scroll */
 }
 
 header {
@@ -29,6 +35,7 @@ h1 {
     left: 70px;
     width: 200px;
     height: auto;
+    border-radius: 20%;
 }
 
 .title-image-right {
