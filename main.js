@@ -88,3 +88,27 @@ document.getElementById("CopyIBAN").addEventListener("click", function() {
                 console.error("Erreur lors de la copie : ", err);
             });
     });
+
+
+// Fonction pour générer un flocon de neige
+function createSnowflake() {
+    const snowflake = document.createElement("i");
+    snowflake.classList.add("snowflake");
+    snowflake.innerHTML = "❄"; // Utilisation du symbole de flocon de neige
+
+    // Position et style aléatoires
+    snowflake.style.left = `${Math.random() * 100}vw`;
+    snowflake.style.fontSize = `${Math.random() * 10 + 10}px`;
+    snowflake.style.animationDuration = `${Math.random() * 3 + 2}s`; // Durée aléatoire
+    snowflake.style.opacity = Math.random();
+
+    document.querySelector(".snow-container").appendChild(snowflake);
+
+    // Supprimer le flocon après l'animation
+    setTimeout(() => {
+        snowflake.remove();
+    }, 5000); // Durée de vie d'un flocon
+}
+
+// Génère un nouveau flocon toutes les 300 ms
+setInterval(createSnowflake, 300);

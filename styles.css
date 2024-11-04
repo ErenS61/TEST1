@@ -442,6 +442,36 @@ footer p {
 
 }
 
+/* Conteneur de flocons */
+.snow-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Permet aux éléments en dessous de rester cliquables */
+    overflow: hidden;
+    z-index: 9999;
+}
+
+/* Style de base des flocons de neige */
+.snowflake {
+    position: absolute;
+    top: -10px; /* Commence au-dessus de la page */
+    color: #ffffff;
+    font-size: 1em;
+    opacity: 0.8;
+    animation: fall linear infinite; /* Animation de chute */
+}
+
+/* Animation de chute */
+@keyframes fall {
+    to {
+        transform: translateY(100vh); /* Fait tomber les flocons vers le bas */
+    }
+}
+
+
 /* -------------------------------------------------- */
 
 /* Responsive design pour les petits écrans */
