@@ -482,11 +482,6 @@ footer p {
 
 /* Responsive design pour les petits écrans */
 @media (max-width: 768px) {
-    body {
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed; /* Assure que l'image reste en place au scroll */
-}
     
     .Titre h1 {
         margin-bottom: 40px;
@@ -874,8 +869,14 @@ footer p {
 
 /* -------------------------------------------------- */
 
-@media only screen and (min-width: 800px) and (max-width: 950px) and (min-height: 300px) and (max-height: 440px) { /* Taille pour les iPhone 15 Pro en mode PAYSAGE */
-
+@media only screen and (min-width: 800px) and (max-width: 950px) and (min-height: 300px) and (max-height: 440px) { /* Taille pour les iPhone 15 Pro en mode PORTRAIT */
+    body {
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Assure que l'image reste en place au scroll */
+}
+    
+    
     .title-image-left {
         position: absolute;
         top: 140px;
