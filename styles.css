@@ -483,7 +483,7 @@ footer p {
 /* Responsive design pour les petits écrans */
 @media (max-width: 768px) and (-webkit-min-device-pixel-ratio: 2) {
     body {
-        background-attachment: fixed; /* Change le comportement uniquement pour iOS */
+        background-attachment: fixed !important; /* Change le comportement uniquement pour iOS */
         background-size: 100%; /* Ajuste la taille pour éviter l'effet de zoom */
     }
     
