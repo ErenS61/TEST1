@@ -681,7 +681,7 @@ footer p {
 /* Responsive design pour les petits écrans */
 @media (max-width: 360px) {
     body {
-        background-attachment: scroll; /* Change le comportement uniquement pour iOS */
+        background-attachment: fixed; /* Change le comportement uniquement pour iOS */
         background-size: 100%; /* Ajuste la taille pour éviter l'effet de zoom */
     }
     
@@ -728,7 +728,7 @@ footer p {
 
 @media only screen and (min-width: 1170px) and (max-width: 1190px) and (min-height: 810px) and (max-height: 830px) { /* Taille pour les iPad Air en mode PAYSAGE */
     body {
-        background-attachment: scroll; /* Change le comportement uniquement pour iOS */
+        background-attachment: fixed; /* Change le comportement uniquement pour iOS */
         background-size: 100%; /* Ajuste la taille pour éviter l'effet de zoom */
     }
     
@@ -754,7 +754,7 @@ footer p {
 
 @media only screen and (min-width: 810px) and (max-width: 820px) and (min-height: 1170px) and (max-height: 1190px) { /* Taille pour les iPad Air en mode PORTRAIT */
     body {
-        background-attachment: scroll; /* Change le comportement uniquement pour iOS */
+        background-attachment: fixed; /* Change le comportement uniquement pour iOS */
         background-size: 100%; /* Ajuste la taille pour éviter l'effet de zoom */
     }
     
@@ -780,7 +780,7 @@ footer p {
 
 @media only screen and (min-width: 1014px) and (max-width: 1034px) and (min-height: 1356px) and (max-height: 1376px) { /* Taille pour les iPad Pro en mode PORTRAIT */
     body {
-        background-attachment: scroll; /* Change le comportement uniquement pour iOS */
+        background-attachment: fixed; /* Change le comportement uniquement pour iOS */
         background-size: 100%; /* Ajuste la taille pour éviter l'effet de zoom */
     }
     
@@ -806,7 +806,7 @@ footer p {
 
 @media only screen and (min-width: 1356px) and (max-width: 1376px) and (min-height: 1014px) and (max-height: 1034px) { /* Taille pour les iPad Pro en mode PAYSAGE */
     body {
-        background-attachment: scroll; /* Change le comportement uniquement pour iOS */
+        background-attachment: fixed; /* Change le comportement uniquement pour iOS */
         background-size: 100%; /* Ajuste la taille pour éviter l'effet de zoom */
     }
     
@@ -832,7 +832,7 @@ footer p {
 
 @media only screen and (min-width: 758px) and (max-width: 778px) and (min-height: 1014px) and (max-height: 1034px) { /* Taille pour les iPad Mini en mode PORTRAIT */
     body {
-        background-attachment: scroll; /* Change le comportement uniquement pour iOS */
+        background-attachment: fixed; /* Change le comportement uniquement pour iOS */
         background-size: 100%; /* Ajuste la taille pour éviter l'effet de zoom */
     }
     
@@ -858,7 +858,7 @@ footer p {
 
 @media only screen and (min-width: 1014px) and (max-width: 1034px) and (min-height: 758px) and (max-height: 778px) { /* Taille pour les iPad Mini en mode PAYSAGE */
     body {
-        background-attachment: scroll; /* Change le comportement uniquement pour iOS */
+        background-attachment: fixed; /* Change le comportement uniquement pour iOS */
         background-size: 100%; /* Ajuste la taille pour éviter l'effet de zoom */
     }
     
@@ -884,7 +884,7 @@ footer p {
 
 @media only screen and (min-width: 657px) and (max-width: 677px) and (min-height: 365px) and (max-height: 385px) { /* Taille pour les iPhone SE en mode PAYSAGE */
     body {
-        background-attachment: scroll; /* Change le comportement uniquement pour iOS */
+        background-attachment: fixed; /* Change le comportement uniquement pour iOS */
         background-size: 100%; /* Ajuste la taille pour éviter l'effet de zoom */
     }
     
@@ -910,7 +910,7 @@ footer p {
 
 @media only screen and (min-width: 724px) and (max-width: 744px) and (min-height: 383px) and (max-height: 403px) { /* Taille pour les iPhone 15 Pro en mode PAYSAGE */
     body {
-        background-attachment: scroll; /* Change le comportement uniquement pour iOS */
+        background-attachment: fixed; /* Change le comportement uniquement pour iOS */
         background-size: 100%; /* Ajuste la taille pour éviter l'effet de zoom */
     }
     
@@ -936,7 +936,7 @@ footer p {
 
 @media only screen and (min-width: 800px) and (max-width: 950px) and (min-height: 300px) and (max-height: 440px) { /* Taille pour les iPhone 15 Pro en mode PORTRAIT */
     body {
-        background-attachment: scroll; /* Change le comportement uniquement pour iOS */
+        background-attachment: fixed; /* Change le comportement uniquement pour iOS */
         background-size: 100%; /* Ajuste la taille pour éviter l'effet de zoom */
     }
     
