@@ -552,7 +552,7 @@ footer p {
 /* -------------------------------------------------- */
 
 /* Breakpoint pour les très petits écrans (par exemple, téléphones) */
-@media (max-width: 500px) and (-webkit-min-device-pixel-ratio: 2) {
+@media (max-width: 500px) {
     body {
         background-attachment: scroll; /* Change le comportement uniquement pour iOS */
         background-size: 100%; /* Ajuste la taille pour éviter l'effet de zoom */
@@ -601,7 +601,7 @@ footer p {
 /* -------------------------------------------------- */
 
 /* Supprimer les changements de dimensions pour les écrans larges */
-@media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2) {
+@media (min-width: 768px) {
     body {
         background-attachment: scroll; /* Change le comportement uniquement pour iOS */
         background-size: 100%; /* Ajuste la taille pour éviter l'effet de zoom */
@@ -632,7 +632,7 @@ footer p {
 /* -------------------------------------------------- */
 
 /* Responsive design pour les petits écrans */
-@media (max-width: 820px) and (-webkit-min-device-pixel-ratio: 2) {
+@media (max-width: 820px) {
     body {
         background-attachment: scroll; /* Change le comportement uniquement pour iOS */
         background-size: 100%; /* Ajuste la taille pour éviter l'effet de zoom */
@@ -679,7 +679,7 @@ footer p {
 /* -------------------------------------------------- */
 
 /* Responsive design pour les petits écrans */
-@media (max-width: 360px) and (-webkit-min-device-pixel-ratio: 2) {
+@media (max-width: 360px) {
     body {
         background-attachment: scroll; /* Change le comportement uniquement pour iOS */
         background-size: 100%; /* Ajuste la taille pour éviter l'effet de zoom */
