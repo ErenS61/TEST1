@@ -17,14 +17,18 @@ self.addEventListener("install", (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
       console.log("Mise en cache des fichiers");
-      return cache.addAll(urlsToCache).catch((error) => {
-        console.error("Erreur lors de la mise en cache :", error);
-      });
+      return Promise.all(
+        urlsToCache.map((url) => {
+          return cache.add(url).catch((error) => {
+            console.error(`Erreur lors de la mise en cache de ${url} :`, error);
+          });
+        })
+      );
     })
   );
-  // Force l'activation du nouveau service worker immédiatement
   self.skipWaiting();
 });
+
 
 // Activation du Service Worker et nettoyage des anciens caches
 self.addEventListener("activate", (event) => {
