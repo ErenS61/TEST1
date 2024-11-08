@@ -3,10 +3,10 @@ const urlsToCache = [
   "/",
   "/index.html",
   "/styles.css",
-  "/A propos/about.html",
-  "/A propos/about.css",
-  "/Les Amicalistes/les-amicalistes.html",
-  "Les Amicalistes/les-amicalistes.css",
+  "/A%20propos/about.html",
+  "/A%20propos/about.css",
+  "/Les%20Amicalistes/les-amicalistes.html",
+  "/Les%20Amicalistes/les-amicalistes.css",
   "/images/icon/apple-touch-icon-192x192.png",
   "/images/icon/apple-touch-icon-512x512.png",
   "/manifest.json"
@@ -17,7 +17,9 @@ self.addEventListener("install", (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
       console.log("Mise en cache des fichiers");
-      return cache.addAll(urlsToCache);
+      return cache.addAll(urlsToCache).catch((error) => {
+        console.error("Erreur lors de la mise en cache :", error);
+      });
     })
   );
   // Force l'activation du nouveau service worker immédiatement
@@ -39,7 +41,7 @@ self.addEventListener("activate", (event) => {
     })
   );
   // Prendre le contrôle de la page immédiatement
-  return self.clients.claim();
+  self.clients.claim();
 });
 
 // Interception des requêtes réseau pour servir les fichiers en cache
