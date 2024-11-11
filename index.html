@@ -54,10 +54,11 @@
                     alt="Logo Geii"
                     class="title-image-left" />
                 <h1>Vente produits - Amicale GEii Mulhouse</h1>
-                <img
-                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Logo_Universit%C3%A9_de_Haute-Alsace_-_UHA.png/800px-Logo_Universit%C3%A9_de_Haute-Alsace_-_UHA.png"
-                    alt="Logo UHA"
-                    class="title-image-right" />
+                <div class="clock-container">
+                    <h3 class="location-text">Heure actuelle</h3>
+                    <div id="clock" class="clock-display">--:--:--</div>
+                    <p id="date" class="date-display"></p>
+                </div>
             </section>
         </header>
 
@@ -568,7 +569,7 @@
                 /* ------------- VENTE FLASH ------------- */
                 /* --------------------------------------- */
 
-                0: { name: "Powerade", format: "png", available: 1 }, // 1 pour disponible, 0 pour épuisé
+                0: { name: "Powerade", format: "png", available: 0 }, // 1 pour disponible, 0 pour épuisé
                 1: { name: "Crunch", format: "jpg", available: 1 },
                 2: { name: "Haribo", format: "png", available: 1 },
 

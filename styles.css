@@ -37,13 +37,34 @@ h1 {
     border-radius: 20%;
 }
 
-.title-image-right {
+.clock-container {
     position: absolute;
-    top: 110px;
-    right: 60px;
-    width: 250px;
-    height: auto;
+    top: 100px;
+    right: 80px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 20px 30px;
+    border-radius: 8px;
+    color: #000000;
 }
+
+.location-text {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color : #2b3b85
+}
+
+.clock-display {
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.date-display {
+    font-size: 16px;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
 
 .product-description-rupture {
     color: #ff0000;

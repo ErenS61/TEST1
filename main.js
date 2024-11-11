@@ -112,3 +112,22 @@ function createSnowflake() {
 
 // Génère un nouveau flocon toutes les 300 ms
 setInterval(createSnowflake, 300);
+
+function updateDateTime() {
+        const now = new Date();
+        
+        // Format de l'heure
+        const hours = String(now.getHours()).padStart(2, '0');
+        const minutes = String(now.getMinutes()).padStart(2, '0');
+        const seconds = String(now.getSeconds()).padStart(2, '0');
+        document.getElementById('clock').textContent = `${hours}:${minutes}:${seconds}`;
+        
+        // Format de la date
+        const optionsDate = { weekday: 'short', year: 'numeric', month: 'long', day: 'numeric' };
+        const currentDate = new Intl.DateTimeFormat('fr-FR', optionsDate).format(now);
+        document.getElementById('date').textContent = currentDate;
+    }
+
+    // Met à jour l'heure et la date toutes les secondes
+    setInterval(updateDateTime, 1000);
+    updateDateTime(); // Appelle une première fois pour éviter le délai d'une seconde
