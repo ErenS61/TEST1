@@ -508,7 +508,24 @@ footer p {
         background-size: 100%; /* Ajuste la taille pour éviter l'effet de zoom */
     }
     
+    .location-text {
+        display: none; /* Masquer la localisation et la date */
+    }
+
+    .clock-display {
+        font-size: 20px; /* Ajuster la taille de l'heure pour petits écrans */
+    }
     
+    .date-display {
+        font-size: 10px;
+    }
+
+    .clock-container {
+        top: 132px;
+        right: 16px;
+        padding: 13px 15px;
+    }
+
     .Titre h1 {
         margin-bottom: 40px;
         font-size: 25px;
