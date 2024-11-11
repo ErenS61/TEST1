@@ -123,7 +123,7 @@ function updateDateTime() {
         document.getElementById('clock').textContent = `${hours}:${minutes}:${seconds}`;
         
         // Format de la date
-        const optionsDate = { weekday: 'short', year: 'numeric', month: 'long', day: 'numeric' };
+        const optionsDate = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' };
         const currentDate = new Intl.DateTimeFormat('fr-FR', optionsDate).format(now);
         document.getElementById('date').textContent = currentDate;
     }
